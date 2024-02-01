@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodosService completeAll should mark all todos as completed: calls to save 1`] = `
+[
+  [
+    [
+      {
+        "completed": true,
+        "completed_at": 2024-02-01T00:00:00.000Z,
+        "id": "mock_id",
+        "title": "Test Todo",
+      },
+    ],
+  ],
+]
+`;
+
+exports[`TodosService create should add a new todo and return it: calls to create 1`] = `
+[
+  [
+    {
+      "title": "New Todo",
+    },
+  ],
+]
+`;
+
+exports[`TodosService create should add a new todo and return it: calls to save 1`] = `
+[
+  [
+    {
+      "title": "New Todo",
+    },
+  ],
+]
+`;
+
+exports[`TodosService findOne should return a single todo item: calls to findOne 1`] = `
+[
+  [
+    {
+      "where": {
+        "id": "mock_id",
+      },
+    },
+  ],
+]
+`;
+
+exports[`TodosService removeCompletedTodos should remove all completed todos: calls to delete 1`] = `
+[
+  [
+    {
+      "completed": true,
+    },
+  ],
+]
+`;
+
+exports[`TodosService update should update a todo and return the updated todo: calls to findOne 1`] = `
+[
+  [
+    {
+      "where": {
+        "id": "mock_id",
+      },
+    },
+  ],
+]
+`;
+
+exports[`TodosService update should update a todo and return the updated todo: calls to save 1`] = `
+[
+  [
+    {
+      "id": "mock_id",
+      "title": "Updated Todo",
+    },
+  ],
+]
+`;
