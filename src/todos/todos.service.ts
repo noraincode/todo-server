@@ -18,7 +18,9 @@ export class TodosService {
   }
 
   findAll() {
-    return this.todosRepository.find();
+    return this.todosRepository.find({
+      order: { created_at: 'DESC' },
+    });
   }
 
   async findOne(id: string) {
