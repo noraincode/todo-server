@@ -36,6 +36,12 @@ export class TodosController {
     return this.todosService.completeAll();
   }
 
+  @Delete('completed')
+  async removeCompletedTodos() {
+    await this.todosService.removeCompletedTodos();
+    return { message: 'Completed todos have been deleted.' };
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.todosService.findOne(id);
@@ -49,11 +55,5 @@ export class TodosController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.todosService.remove(id);
-  }
-
-  @Delete('completed')
-  async removeCompletedTodos() {
-    await this.todosService.removeCompletedTodos();
-    return { message: 'Completed todos have been deleted.' };
   }
 }
