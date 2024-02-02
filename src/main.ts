@@ -10,7 +10,8 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
 
   const corsOptions: CorsOptions = {
-    origin: ['https://todo-app-psi-roan.vercel.app', 'http://localhost:3000 '],
+    origin: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   };
 
