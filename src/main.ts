@@ -12,9 +12,6 @@ async function bootstrap() {
   const corsOptions: CorsOptions = {
     origin: ['https://todo-app-psi-roan.vercel.app', 'http://localhost:3000 '],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    exposedHeaders: ['Content-Length', 'X-Custom-Header'],
-    credentials: true,
   };
 
   app.enableCors(corsOptions);
